@@ -1,13 +1,3 @@
-:root {
-    --main-background: hsl(222, 26%, 31%);
-    --keypad-background: hsl(223, 31%, 20%);
-    --key-main-color: hsl(30, 25%, 89%);
-    --key-secondary-color: hsl(28, 16%, 65%);
-    --text-main-color: hsl(221, 14%, 31%);
-    --text-secondary-color: hsl(0, 0%, 100%);
-
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -20,16 +10,23 @@ html {
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background-color: var(--main-background);
 }
 
 .calculator {
     width: 85%;
-    margin: 25px auto 10px;
+    height: auto;
 }
 
 .calculator__banner {
     display: flex;
+    margin: 0 auto;
+    min-width: 272px;
+    max-width: 320px;
     justify-content: space-between;
     align-items: flex-end;
 }
@@ -48,7 +45,7 @@ body {
     margin-right: 15px;
     margin-bottom: 2px;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--text-secondary-color);
 }
@@ -61,9 +58,9 @@ body {
 }
 
 .modes-container .mode {
-    font-size: .9rem;
+    font-size: 1rem;
     font-weight: 600;
-    letter-spacing: 1.2rem;
+    letter-spacing: 1.3rem;
     color: var(--text-secondary-color);
 }
 
@@ -74,26 +71,28 @@ body {
     height: 20px;
     border-radius: 10px;
     background-color: var(--keypad-background);
+    cursor: pointer;
 }
 
 .selection-bar__circle {
     margin-left: 5px;
-    width: 10px;
-    height: 10px;
+    width: 11px;
+    height: 11px;
     border-radius: 50%;
-    background-color: hsl(6, 63%, 50%);
+    background-color: var(--equals-key-color);
 }
 
 .calculator__display {
-    margin-top: 30px;
+    margin: 30px auto 0;
     padding: 20px;
     min-height: 70px;
     max-height: auto;
-    width: 100%;
+    min-width: 272px;
+    max-width: 320px;
     border: none;
     outline: none;
     border-radius: 10px;    
-    background-color: hsl(224, 36%, 15%);
+    background-color: var(--display-background);
     text-align: end;
     font-size: 2.8rem;
     font-weight: 600;
@@ -104,7 +103,9 @@ body {
 
 .calculator__keypad {
     display: grid;
-    margin-top: 20px;
+    min-width: 272px;
+    max-width: 320px;
+    margin: 20px auto 0;
     padding: 20px;
     border-radius: 10px;    
     grid-template-columns: repeat(4, 50px);
@@ -125,9 +126,9 @@ body {
 .calculator__keypad .main {
     font-size: 2.5rem;
     font-weight: 700;
-    box-shadow: 0 3px var(--key-secondary-color);
+    box-shadow: 0 3px var(--main-keys-shadow-color);
     color: var(--text-main-color);
-    background-color: var(--key-main-color);
+    background-color: var(--main-keys-color);
 }
 
 .calculator__keypad .reset {
@@ -136,11 +137,11 @@ body {
 
 .calculator__keypad .equal {
     grid-column: 3 / span 2;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-secondary-color);
-    background-color: hsl(6, 63%, 50%);
-    box-shadow: 0 3px hsl(6, 70%, 34%);
+    background-color: var(--equals-key-color);
+    box-shadow: 0 3px var(--equals-key-shadow-color);
 }
 
 .calculator__keypad .del,
@@ -149,23 +150,36 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     color: var(--text-secondary-color);
-    background-color: hsl(225, 21%, 49%);
-    box-shadow: 0 3px hsl(224, 28%, 35%);
+    background-color: var(--delreset-key-color);
+    box-shadow: 0 3px var(--delreset-key-shadow-color);
 }
 
 footer {
     display: flex;
-    margin: 0 auto;
+    margin: 10px auto;
+    height: auto;
+    min-width: 272px;
+    max-width: 320px;
     justify-content: flex-end;
     align-items: center;
-    width: 85%;
-    height: auto;
 }
 
 a .icon{
     padding-bottom: 10px;
     padding-left: 10px;
-    width: 2rem;
-    height: 2rem;
-    color: hsl(224, 36%, 15%);
+    width: 1.8rem;
+    height: 1.8rem;
+    color: var(--main-keys-color);
+}
+
+@media (min-width:400px) {
+    .calculator__keypad {
+        grid-template-columns: repeat(4, 60px);
+        height: 400px;
+        gap: 10px;
+    }
+    .calculator__keypad > button {
+        height: 60px;
+        min-width: 60px;
+    }
 }

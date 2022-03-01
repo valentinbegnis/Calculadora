@@ -42,14 +42,21 @@ function append(operand) {
     else if(checkOperand(output.innerText[output.innerText.length - 1]) 
             && checkOperand(operand)) {
         output.innerText = output.innerText.slice(0, -1);
+    } 
+
+    if(operand === 'x') {
+        output.innerText += '*';
+    } else if (output.innerText.length < 22){
+        output.innerText += operand;
     }
-    output.innerText += operand;
 }
 
 function equals() {
-    output.innerText = eval(output.innerText);
-    if(!isFinite(output.innerText)) {
-        output.innerText = 'Cannot divide by zero';
+    const result = eval(output.innerText);
+    if(!isFinite(result)) {
+        output.innerText = 'Cannot divide by zero';  
+    } else {
+        output.innerText = result;
     }
 }
 

@@ -1,0 +1,13 @@
+:root {
+    --main-background: hsl(222, 26%, 31%);
+    --keypad-background: hsl(223, 31%, 20%);
+    --display-background: hsl(224, 36%, 15%);
+    --main-keys-color: hsl(30, 25%, 89%);
+    --main-keys-shadow-color: hsl(28, 16%, 65%);
+    --delreset-key-color: hsl(225, 21%, 49%);
+    --delreset-key-shadow-color: hsl(224, 28%, 35%);
+    --equals-key-color: hsl(6, 63%, 50%);
+    --equals-key-shadow-color: hsl(6, 70%, 34%);
+    --text-main-color: hsl(221, 14%, 31%);
+    --text-secondary-color: hsl(0, 0%, 100%);
+}

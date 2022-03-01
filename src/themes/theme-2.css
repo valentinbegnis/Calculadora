@@ -1,0 +1,38 @@
+:root {
+    --main-background: hsl(0, 0%, 90%);
+    --keypad-background: hsl(0, 5%, 81%);
+    --display-background: hsl(0, 0%, 97%);
+    --main-keys-color: hsl(45, 7%, 89%);
+    --main-keys-shadow-color: hsl(35, 11%, 61%);
+    --delreset-key-color: hsl(185, 42%, 37%);
+    --delreset-key-shadow-color: hsl(185, 58%, 25%);
+    --equals-key-color: hsl(25, 98%, 40%);
+    --equals-key-shadow-color: hsl(25, 99%, 27%);
+    --text-main-color: hsl(60, 10%, 19%);
+    --text-secondary-color: hsl(0, 0%, 100%);
+}
+
+.calculator__banner h1 {
+    color: var(--text-main-color);
+}
+
+.themes h2 {
+    color: var(--text-main-color);
+}
+
+.modes-container .mode {
+    color: var(--text-main-color);
+}
+
+.selection-bar__circle {
+    transform: translateX(18px);
+    transition: transform .2s ease-in-out;
+}
+
+.calculator__display {
+    color: var(--text-main-color);
+}
+
+a .icon{
+    color: var(--delreset-key-shadow-color);
+}

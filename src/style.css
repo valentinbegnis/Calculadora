@@ -164,10 +164,8 @@ footer {
     align-items: center;
 }
 
-a .icon{
+a i{
     padding-bottom: 10px;
     padding-left: 10px;
-    width: 1.8rem;
-    height: 1.8rem;
     color: var(--main-keys-color);
 }

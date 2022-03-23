@@ -38,6 +38,6 @@
     color: hsl(198, 20%, 13%);
 }
 
-a .icon{
+a i {
     color: var(--text-main-color);
 }

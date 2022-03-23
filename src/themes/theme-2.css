@@ -33,6 +33,6 @@
     color: var(--text-main-color);
 }
 
-a .icon{
+a i {
     color: var(--delreset-key-shadow-color);
 }

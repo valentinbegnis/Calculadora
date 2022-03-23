@@ -1,9 +1,10 @@
 const themeSelector = document.getElementById('themeSelector');
 const themeLink = document.getElementById('themeLink');
 
-const themes = ['./themes/theme-1.css',
- './themes/theme-2.css',
-  './themes/theme-3.css'
+const themes = [
+    './themes/theme-1.css',
+    './themes/theme-2.css',
+    './themes/theme-3.css'
 ];
 
 themeSelector.addEventListener('click', () => {
